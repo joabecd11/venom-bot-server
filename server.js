@@ -47,6 +47,7 @@ app.get('/connect/:sessionId', async (req, res) => {
     });
 });
 
-app.listen(3001, () => {
-  console.log('✅ Servidor Venom rodando na porta 3001');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`✅ Servidor Venom rodando na porta ${PORT}`);
 });
